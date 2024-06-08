@@ -13,12 +13,12 @@
 <Presentation>	
 	<script>
 		// information about this presentation 
-		const author = "Anran Wang, Christian Schuler"; 
-		const authorshort = "Wang, Schuler"; 
-		const title = "This Is My Own Title";
-		const subtitle = "And here is my subtitle";
-		const department = "Department of Informatics"; 
-		const university = "Technical University of Munich"; 
+		const author = "Jan Sudeikat & Michael Köhler-Bußmeier"; 
+		const authorshort = "Raman Ahmad"; 
+		const title = "Energieverbrauch von Anwendungen";
+		const subtitle = "Maschinelles Lernen";
+		const department = "Hochscuhle für Angewandte Wissenschaften HAW"; 
+		const university = "Informatik Seminar Bachelor, SoSe 24"; 
 		var currentChapterName="";
 		var currentChapterNumber=0;
 		var chapterNames=[];
@@ -64,7 +64,7 @@
 			<span id="mydate"></span>
 		</div>
 		<br>
-		<div class="flex items-center justify-center">
+		<div class="flex items-center justify-center" style="display: none;">
 			<img class="h-[10vh] align-middle" src="title-logo.svg" alt="tum logo">
 		</div>
 		<!-- fill in the data for this presentation  -->
