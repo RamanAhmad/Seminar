@@ -24,8 +24,11 @@
 	:root{
 		--tumblue: #0065BD;
 		--secondblue: #8AB1DA;
-		--themecolor: var(--tumblue);
-		--themecolorlight: var(--secondblue);
+		--uhhred: #811b27;
+		--firstred: #cf6161;
+		--secondred: #694343;
+		--themecolor: var(--firstred);
+		--themecolorlight: var(--secondred);
 	}
 	.topbar{
 		/* margin-top: 0.5vh; */
