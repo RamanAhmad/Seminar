@@ -15,5 +15,5 @@ export default defineConfig({
 			'@styles': path.resolve(__dirname, './src/lib/styles'),
 		},
 	},
-	base: '/CRAMT-Slides/'
+	base: '/Seminar/'
 })
