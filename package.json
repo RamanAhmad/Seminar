@@ -10,7 +10,7 @@
 		"check": "svelte-check --tsconfig ./tsconfig.json"
 	},
 	"devDependencies": {
-		"@sveltejs/vite-plugin-svelte": "^2.4.2",
+		"@sveltejs/vite-plugin-svelte": "^2.5.3",
 		"@tsconfig/svelte": "^5.0.0",
 		"@types/node": "^20.4.4",
 		"@types/reveal.js": "^4.4.2",
@@ -30,6 +30,7 @@
 	"dependencies": {
 		"@fontsource-variable/jetbrains-mono": "^5.0.6",
 		"@fontsource-variable/manrope": "^5.0.5",
+		"@sveltejs/adapter-auto": "^3.2.1",
 		"reveal.js": "^4.5.0"
 	}
 }

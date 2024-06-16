@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Presentation, Slide, Notes, Step } from '@components'
+	import { Presentation, Slide, Notes } from '@components'
 	import Layout from './layout.svelte'
 </script>
 
@@ -10,73 +10,103 @@
 
 -->
 
-<Presentation>	
+<Presentation>
+	<style>
+		.textStyle ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		.textStyle li {
+			margin-bottom: 10px; /* optional: Hinzufügen von vertikalem Abstand zwischen den Listenelementen */
+			font-size: 6vh;
+		}
+	</style>
+
 	<script>
-		// information about this presentation 
-		const author = "Christian Schuler, Tramy Thi Tran, Deepesha Saurty, <br>Anran Wang, Raman Ahmad, Seid Muhie Yimam"; 
-		const authorshort = "Schuler, Tran, Saurty, Wang, Ahmad, Yimam"; 
-		const title = "Mehrsprachige Datenaggregation für Machinenübersetzung <br>von Sprachen mit geringen Ressourcen";
-		const subtitle = "(CRAMT - Cross-Lingual Resource Aggregation of<br> Low-Resource Machine Translation and Metadata)";
-		const department = "Studenten Projekt"; 
-		const university = "Ein Werkzeug zum Sammeln von Sprachdaten"; 
-		var currentChapterName="";
-		var currentChapterNumber=0;
-		var chapterNames=[];
-		var toc = false;  // whether toc is to be generated
+		// information about this presentation
+		const author = 'Raman Ahmad'
+		const authorshort = 'Raman Ahmad'
+		const title = 'Energieverbrauch von Anwendungen'
+		const subtitle = 'Maschinelles Lernen'
+		const department = 'Hochscuhle für Angewandte Wissenschaften HAW'
+		const university =
+			'Informatik Seminar Bachelor, SoSe 24 </br>Jan Sudeikat & Michael Köhler-Bußmeier'
+		var currentChapterName = ''
+		var currentChapterNumber = 0
+		var chapterNames = []
+		var toc = false // whether toc is to be generated
 		// data structure: [chapter number, chapter name, slideID]
-		var presentationData = []; 
-		function newChapter(chapterName){
-			currentChapterName=chapterName; 
-			currentChapterNumber++;
-			chapterNames.push(chapterName);
+		var presentationData = []
+		function newChapter(chapterName) {
+			currentChapterName = chapterName
+			currentChapterNumber++
+			chapterNames.push(chapterName)
 		}
 		// called when new slide is created
-		var page=0; 
-		function newPage(){
-			page++; //note that page n has index n-1
-			presentationData.push({chapternr: currentChapterNumber, chapter:currentChapterName,pagenr:page});
+		var page = 0
+		function newPage() {
+			page++ //note that page n has index n-1
+			presentationData.push({
+				chapternr: currentChapterNumber,
+				chapter: currentChapterName,
+				pagenr: page,
+			})
 		}
 	</script>
 
 	<!-- title page -->
-	<Slide><Layout>
-		<div class="m-16 flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]">
-			<div>
-				<div class="text-[5vh]">
-					<span id="mytitle"> </span>
-				</div>
-				<br>
-				<div class="text-[4vh]">
-					<span id="mysubtitle"> </span>
+	<Slide
+		><Layout>
+			<div
+				class="m-16 flex h-[25vh] w-[90vw] bg-[var(--themecolor)] text-white items-center justify-center gap-[100px]"
+			>
+				<div>
+					<div class="text-[8vh]">
+						<span id="mytitle"> </span>
+					</div>
+					<br />
+					<div class="text-[6vh]">
+						<span id="mysubtitle"> </span>
+					</div>
 				</div>
 			</div>
-		</div>
-		<br>
-		<div> 
-			<span id="myname"></span>
-		</div>
-		<br>
-		<div class="text-[3vh]"> 
-			<span id="myuni"></span>
-		</div>
-		<div class="text-[3.5vh]"> 
-			<br>
-			<span id="mydate"></span>
-		</div>
-		<br>
+			<div class="text-[6vh]">
+				<span id="myname"></span>
+			</div>
+			<br />
+			<div class="text-[4vh]">
+				<span id="myuni"></span>
+			</div>
+			<div class="text-[3.5vh]">
+				<br />
+				<span id="mydate"></span>
+			</div>
+			<br />
+			<!-- 
 		<div class="flex items-center justify-center">
 			<img class="h-[15vh] align-middle" src="title-logo.png" alt="tum logo">
 		</div>
-		<!-- fill in the data for this presentation  -->
-		<script> 
-			document.getElementById("mytitle").innerHTML=title;
-			document.getElementById("mysubtitle").innerHTML=subtitle;
-			document.getElementById("myname").innerHTML=author;
-			document.getElementById("myuni").innerHTML=department+"<br>"+university;
-			let today = new Date(); 
-			document.getElementById("mydate").innerHTML=today.toISOString().split('T')[0]; 
-		</script>
-	</Layout></Slide>
+		-->
+			<!-- fill in the data for this presentation  -->
+			<!-- fill in the data for this presentation  -->
+			<!-- fill in the data for this presentation  -->
+			<!-- fill in the data for this presentation  -->
+			<!-- fill in the data for this presentation  -->
+			<script>
+				document.getElementById('mytitle').innerHTML = title
+				document.getElementById('mysubtitle').innerHTML = subtitle
+				document.getElementById('myname').innerHTML = author
+				document.getElementById('myuni').innerHTML =
+					department + '<br>' + university
+				let today = new Date()
+				document.getElementById('mydate').innerHTML = today
+					.toISOString()
+					.split('T')[0]
+			</script>
+		</Layout></Slide
+	>
 	<!-- TOC -->
 	<!-- <Slide>
 		<script>
@@ -89,813 +119,867 @@
 			</toc>
 		</Layout>
 	</Slide> -->
-	
+
 	<!-- intro -->
-	<script>newChapter("Einleitung")</script>
+
+	<!-- intro -->
+	<!-- intro -->
+	<!-- intro -->
+	<!-- intro -->
+	<script>
+		newChapter('Gliederung')
+	</script>
 	<Slide>
 		<Layout>
-			<titlebar>
-				Das Team hinter CRAMT
-			</titlebar>
-			<mybody>
-				<div class="grid" style="grid-template-columns: auto auto auto auto auto auto; mx-auto my-auto;">
-					<!-- Names -->
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3.0vh]">
-						Christian Schuler
-					</div>
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3.0vh]">
-						Tramy Thi Tran
-					</div>
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3.0vh]">
-						Deepesha Saurty
-					</div>
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3.0vh]">
-						Anran Wang
-					</div>
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3.0vh]">
-						Raman Ahmad
-					</div>
-					<div class="flex w-[16vw] items-center justify-center gap-[10px] text-[3vh]">
-						Seid Muhie Yimam
-					</div>
+			<titlebar>Gliederung</titlebar>
+			<mybody class="textStyle">
+				<ul>
+					<li>1. Grundlagen von Rechenzentren und Energieverbrauch</li>
+					<li>2. Energieverbrauch in der KI</li>
+					<li>3. Spezifische Studienergebnisse und deren Interpretation</li>
+					<li>4. Nachhaltigkeit und Optimierungspotenziale</li>
+					<li>5. Herausforderungen und zukünftige Entwicklungen</li>
+					<li>6. Fazit</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes>
+	</Slide>
 
-					<!-- Images -->
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<a href="https://christianschuler8989.github.io/">
-							<img src="Christian_Schuler_08_Energydrink.jpg" alt="christian" class="h-[40vh]">
-							<figcaption class="text-[2.3vh]">
-								Master student in computer science at University of Hamburg.
-							</figcaption>
-							<figcaption class="text-[1.3vh]">
-								With a passion for languages and colors, he aims to do a PhD. <br>Additionally, he eats more pizza in one year than any of you in your lifetime!
-							</figcaption>
-						</a>
-					</figure>
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<img src="DDLitLab-TextAsCorpusRep-Myyyy2.jpeg" alt="myy" class="h-[40vh]">
-						<figcaption class="text-[2.3vh]">
-							Bachelor student in something like computer science at University of Hamburg.
-						</figcaption>
-						<figcaption class="text-[1.3vh]">
-							She is not simply the head of our HR-department, she IS the entire department! XD #bestProjectCoordinatorInTown
-						</figcaption>
-					</figure>
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<img src="DDLitLab-TextAsCorpusRep-Tania2.jpg" alt="tania" class="h-[40vh]">
-						<figcaption class="text-[2.3vh]">
-							Bachelor student in computer science at University of Hamburg.
-						</figcaption>
-						<figcaption class="text-[1.3vh]">
-							By now she went down the rabbit hole of science so much, that people actually heard her say "Algorithms are fun!"
-						</figcaption>
-					</figure>
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<img src="Anran_Wang_01.png" alt="anran" class="h-[40vh]">
-						<figcaption class="text-[2vh]">
-							<!-- Master student in computer science at Technical University Munich. -->
-							Phd Studentin, University of Saarland Graduate School; Wissenschaftliche Mitarbeiterin Max-Plank Institute, Software System, Saarbrücken.
-						</figcaption>
-						<figcaption class="text-[1.3vh]">
-							<!-- She is so awesome, that she did not start looking for a PhD position like most mortal beings do- the PhD position came falling out of the sky and had to apply to her first! -->
-							She is super awesome, and she is super lucky to have found amazing people in Hamburg and Saarbrücken to spend time with and study with.
-						</figcaption>
-					</figure>
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<img src="Raman_Ahmad_01.png" alt="raman" class="h-[40vh]">
-						<figcaption class="text-[2.3vh]">
-							Bachelor student in computer science at Hochschule für Angewandte Wissenschaften in Hamburg.
-						</figcaption>
-						<figcaption class="text-[1.3vh]">
-							He is currently exploring various ways to advance the low-resource language Kurdish with a focus on the Kobani dialect.
-						</figcaption>
-					</figure>
-					<figure class="h-[60vh] w-[15vw] float-left mx-auto my-auto">
-						<a href="https://seyyaw.github.io/">
-							<img src="DDLitLab-TextAsCorpusRep-Mentor.jpeg" alt="seid" class="h-[40vh]">
-							<figcaption class="text-[2.3vh]">
-								Technical Lead at HCDS and Research Associate at Language Technology Group in Hamburg.
-							</figcaption>
-						</a>
-						<figcaption class="text-[1.3vh]">
-							He researches low-resource languages, in particular related to the Amharic language, while he uses his spare time to mentor and supervise groups of students like noone else could! :D
-						</figcaption>
-					</figure>
-					
-					<!-- Logos -->
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="uhh-logo.png" alt="uhh-logo" class="h-[7vh]">
-					</figure>
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="uhh-logo.png" alt="uhh-logo" class="h-[7vh]">
-					</figure>
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="uhh-logo.png" alt="uhh-logo" class="h-[7vh]">
-					</figure>
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="Anran-Logos-Stacked.png" alt="saarbruecken-logo" class="h-[7vh]">
-						<!-- <img src="Logo-Saarbruecken-University.png" alt="saarbruecken-logo" class="h-[7vh]"> -->
-						<!-- <img src="tum-logo.png" alt="tum-logo" class="h-[7vh]"> -->
-					</figure>
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="haw-logo.png" alt="haw-logo" class="h-[7vh]">
-					</figure>
-					<figure class="flex h-[10vh] w-[15vw] items-center justify-center mx-auto my-auto">
-						<img src="uhh-logo.png" alt="uhh-logo" class="h-[7vh]">
-					</figure>
-					
-				</div>
+	<script>
+		newChapter('Frage')
+	</script>
+	<Slide>
+		<Layout>
+			<titlebar>Frage | Gedankenexperiment</titlebar>
+			<mybody>
+				<ul>
+					<li>
+						Wenn ihr euch aus Protest für den Umweltschutz irgendwo festkleben
+						könntet, wo würde das sein?
+					</li>
+					<br />
+					<li style="margin-bottom: 10px;">1. Auf der Autobahn</li>
+					<li style="margin-bottom: 10px;">2. Am Flughafen</li>
+					<li style="margin-bottom: 10px;">3. Vor einem KI-Unternehmen</li>
+					<li style="margin-bottom: 10px;">4. Auf Zuggleise</li>
+				</ul>
 			</mybody>
 		</Layout>
 	</Slide>
 
-	<Slide><Layout>
-		<titlebar > Verarbeitung Natürlicher Sprache - ChatGPT</titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="ChatGPT-01.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		Notes
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Verarbeitung Natürlicher Sprache - ChatGPT</titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="ChatGPT-02.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		Notes
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Verarbeitung Natürlicher Sprache - ChatGPT</titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="ChatGPT-03.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		Notes
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Sprachverarbeitung und Bilder - StableDiffusion</titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="Domi-001.png" alt="domi01">
-			</div>
-			<Step>
+	<script>
+		newChapter('RZ')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar>Rechenzentren</titlebar>
+			<mybody>
 				<div class="flex items-center justify-center">
-					<img class="h-[75vh] align-middle" src="Domi-002.png" alt="domi02">
+					<div class="flex-1">
+						<p style="font-size: 0.8em;">Definition</p>
+						<br />
+						<p style="font-size: 0.5em;">
+							IT-Betriebsbereiche, aus denen heraus <br /> Dienste/Dienstleistungen
+							für Dritte erbracht werden, sind immer als RZ zu betrachten. Dabei
+							ist es unerheblich, ob diese Erbringung gegen Entgelt erfolgt oder
+							nicht.*
+						</p>
+						<br />
+						<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+						<p style="font-size: 0.3em;">* BSI</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
+						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
+					</div>
 				</div>
-			</Step>
-			<Step>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+
+	<Slide
+		><Layout>
+			<titlebar>Rechenzentren</titlebar>
+			<mybody>
 				<div class="flex items-center justify-center">
-					<img class="h-[75vh] align-middle" src="Domi-003.png" alt="domi03">
+					<div class="flex-1">
+						<p style="font-size: 0.8em;">Definition</p>
+						<br />
+						<p style="font-size: 0.6em;">
+							Gebäude zur Unterbringung und Betrieb von IT-Infrastruktur
+						</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
+						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
+					</div>
 				</div>
-			</Step>
-			<Step>
-				<div class="flex items-center justify-center">
-					<img class="h-[75vh] align-middle" src="Domi-004.png" alt="domi04">
-				</div>
-			</Step>
-		</mybody>
-	</Layout>
-	<Notes>
-		A proud warrior holding his diploma. The warrior is clad in armor.
-		Ein stolzer Krieger der sein Diplom hält. Der Krieger ist in eine Rüstung gehüllt.
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
-	<!-- <Slide><Layout>
-		<titlebar > Sprachverarbeitung und Bilder - StableDiffusion</titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="Domi-005.png" alt="domi01">
-			</div>
-			<Step>
-				<div class="flex items-center justify-center">
-					<img class="h-[75vh] align-middle" src="Domi-006.png" alt="domi02">
-				</div>
-			</Step>
-		</mybody>
-	</Layout>
-	<Notes>
-		A proud warrior holding his diploma. The warrior is clad in armor.
-		Ein stolzer Krieger der sein Diplom hält. Der Krieger ist in eine Rüstung gehüllt.
-	</Notes></Slide> -->
-
-
-
-	<script>newChapter("Motivation");</script>
-	<Slide><Layout>
-		<titlebar > Über (Sprach-)Grenzen hinaus </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="title-banner.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
-	
-	<Slide><Layout>
-		<titlebar > Schwierigkeiten beim Übersetzen </titlebar>
-		<mybody class="text-[3.5vh]">
-			<ul class="a" >
-				<li>Das im Schottischen sehr übliche Wort "Tartle"</li>
-				<ul class="a" >
-					<li>Der unschöne Moment, der entsteht, während man versucht, sich an den Namen einer Person zu erinnern, der einem soeben entfallen ist.</li>
-					<li>Dies gilt aber nur, wenn einem der Name dann nach einem peinlichen Moment doch noch einfällt.</li>
+	<script>
+		newChapter('RZ & EV')
+	</script>
+	<!--1. RZ & EV-->
+	<Slide
+		><Layout>
+			<titlebar>RZ und Energieverbrauch</titlebar>
+			<mybody>
+				<ul>
+					<li style="margin-bottom: 10px;">
+						"Obwohl Rechenzentren keinen schwarzen Rauch ausstoßen oder fettige
+						Zahnräder mahlen, sind sie nicht frei von Umweltauswirkungen*"
+					</li>
+					<br />
+					<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+					<p style="font-size: 0.3em;">* lbl.gov</p>
 				</ul>
-				<br>
-				<li>Der Chinesische Begriff: 江湖 (jiāng hú)</li>
-				<ul class="a" >
-					<li>江 = river (Fluss)，湖 = lake (See)</li>
-					<li>江湖 = eine Gesellschaft in welcher Bruderschaft, Kameraderie, Tapferkeit, Gerechtigkeit sehr hoch angesehen sind, und weniger Gesetze und Ordnung etabliert ist.</li>
-					<li>Findet sich in Fiktion Romanen welche in antiken Zeiten (1000-1800) spielen, in denen "Kongfu" existiert und Menschen trainieren und lernen können, um große Macht zu erlangen. </li>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+
+	<!--2. RZ & EV-->
+	<Slide
+		><Layout>
+			<titlebar>RZ und Energieverbrauch</titlebar>
+			<mybody>
+				<ul>
+					<li style="margin-bottom: 10px">
+						"Obwohl Rechenzentren keinen schwarzen Rauch ausstoßen oder fettige
+						Zahnräder mahlen, sind sie nicht frei von Umweltauswirkungen"
+					</li>
+					<br />
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
+					</li>
 				</ul>
-		</mybody>
-	</Layout>
-	<Notes>
-		江湖： a society where brotherhood, comeradery, bravery, fairness is greatly valued, and less law and order established, <br>
-		usually appears in fiction novels set in ancient times (1000-1800s) where kongfu is possible and people can train and learn to have great power
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
+	<!--3. RZ & EV-->
+	<Slide
+		><Layout>
+			<titlebar>RZ und Energieverbrauch</titlebar>
+			<mybody>
+				<ul>
+					<li style="margin-bottom: 10px;">
+						"Obwohl Rechenzentren keinen schwarzen Rauch ausstoßen oder fettige
+						Zahnräder mahlen, sind sie nicht frei von Umweltauswirkungen"
+					</li>
+					<br />
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verursachen CO2-Emissionen, etwa 0,3 % der globalen
+						Emissionen.
+					</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Grenzen der Übersetzungsdienste (Beispiel: Google Translate) </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="CRAMT-Tool-MotivationSimpleMore.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+	<!--4. RZ & EV-->
+	<Slide
+		><Layout>
+			<titlebar>RZ und Energieverbrauch</titlebar>
+			<mybody>
+				<ul>
+					<li style="margin-bottom: 10px;">
+						"Obwohl Rechenzentren keinen schwarzen Rauch ausstoßen oder fettige
+						Zahnräder mahlen, sind sie nicht frei von Umweltauswirkungen"
+					</li>
+					<br />
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verursachen CO2-Emissionen, etwa 0,3 % der globalen
+						Emissionen.
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Das ist mehr als der nationale Energieverbrauch einiger Länder,
+						z.B. Iran.
+					</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
+	<!-- Agenda -->
+	<Slide
+		><Layout>
+			<titlebar>Engergieverbrauch Prognose</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center flex-col">
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<img
+						class="h-[70vh] align-middle mb-2"
+						src="Energieverbrauchsprognose.jpg"
+					/>
+					<div class="text-xs mt-auto">Quelle: datacenters.lbl.gov</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL01.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+	<script>
+		newChapter('EV & KI')
+	</script>
+	<!--1. EV & KI-->
+	<Slide
+		><Layout>
+			<titlebar>Energieverbrauch in der KI</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1">
+						<br />
+						<br />
+						<br />
+						<p style="font-size: 1.2em;">"KI ist alles andere als grün*"</p>
+						<br />
+						<br />
+						<br />
+						<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+						<p style="font-size: 0.3em;">* spektrum.de</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<img
+							class="h-[70vh] align-middle mb-2"
+							src="energy-consumption.jpg"
+						/>
+						<div class="text-xs mt-auto">Quelle: wsj.com</div>
+					</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL02.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+		<!--2. EV & KI-->
+		<Slide
+		><Layout>
+			<titlebar>Energieverbrauch in der KI</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1">
+						<ul>
+							<li style="margin-bottom: 2px; font-size: 0.6em;">
+								"KI ist alles andere als grün"
+							</li>
+							<br />
+							<li style="margin-bottom: 10px; font-size: 0.6em;">
+								• CO2-Emissionen von fünf Autos über ihren gesamten Lebenszyklus.
+							</li>
+							<li style="margin-bottom: 10px; font-size: 0.6em;">
+								• KI benötigt im Vergleich zum menschlichen Gehirn deutlich mehr Energie.
+							</li>
+						</ul>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							class="h-[70vh] align-middle mb-2"
+							src="energy-consumption.jpg"
+						/>
+						<div class="text-xs mt-auto">Quelle: wsj.com</div>
+					</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL03.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+	<Slide
+		><Layout>
+			<titlebar> Lack of Standardization </titlebar>
+			<mybody>
+				<figure>
+					<table>
+						<tr>
+							<th>Dialect Group</th>
+							<th>#Var</th>
+							<th>#ISO Codes</th>
+							<th>#Wiki (Articles)</th>
+						</tr>
+						<tr>
+							<td>Central Kurdish</td>
+							<td>13</td>
+							<td>2</td>
+							<td>53,856</td>
+						</tr>
+						<tr>
+							<td>Northern Kurdish</td>
+							<td>28</td>
+							<td>1</td>
+							<td>75,358</td>
+						</tr>
+						<tr>
+							<td>Southern Kurdish</td>
+							<td>13</td>
+							<td>1</td>
+							<td>0</td>
+						</tr>
+						<tr>
+							<td>Zazaki</td>
+							<td>10</td>
+							<td>3</td>
+							<td>41,811</td>
+						</tr>
+						<tr>
+							<td>Gorani</td>
+							<td>13</td>
+							<td>4</td>
+							<td>0</td>
+						</tr>
+					</table>
+					<figcaption>
+						Number of language varieties (#Var) and <br /> corresponding
+						ISO-Codes (#ISO) according to Glottolog [1], <br /> number of wikipedia
+						articles (#Wiki) according to Wikimedia [2].
+					</figcaption>
+					<p class="text-[2vh]">
+						<br />
+						[1] http://glottolog.org
+						<br />
+						[2] https://meta.wikimedia.org/wiki/List_of_Wikipedias_by_language_group
+					</p>
+				</figure>
+			</mybody>
+		</Layout>
+		<Notes>
+			Harald Hammarström, Robert Forkel, Martin Haspelmath, and Sebastian Bank.
+			2023. Glot- tolog 4.8. (Available online at http://glottolog.org, Accessed
+			on 2024-03-06.). Wikimedia. 2024. List of Wikipedias by language group -
+			Meta — meta.wikimedia.org.
+			https://meta.wikimedia.org/wiki/List_of_Wikipedias_by_language_group.
+			[Accessed 06-03-2024].
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL04.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+	<script>
+		newChapter('Related Work')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> Bridging the Language Gap </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[70vh] align-middle"
+						src="CRAMT-Tool-TextAlignmentsOverviewMulti.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL05.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+	<Slide
+		><Layout>
+			<titlebar> Use of Pivot Languages </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[70vh] align-middle"
+						src="CRAMT-Tool-TextAlignments.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL06.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
+	<Slide
+		><Layout>
+			<titlebar> Bilingual Lexicon Induction (TODO) </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[75vh] align-middle"
+						src="title-banner.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL07.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
-
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL08.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
-
-	<Slide><Layout>
-		<titlebar > Sprachen im Internet </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="LowResource-IL09.png" alt="chatGPT01">
-			</div>
-		</mybody>
-	</Layout></Slide>
-
-	<script> newChapter("Vorgehen"); </script>
-	<Slide><Layout>
-		<titlebar > Übersicht von CRAMT </titlebar>
-		<mybody>
-			<figure class="h-[80vh] w-[70vw]">
-				<img src="CRAMT-Tool-OverviewSimpleSlick.png" alt="ambiguities1" class="mx-auto">
-				<figcaption class="text-[4.0vh]">
-					Übersicht des CRAMT Werkzeuges. Nutzereingaben in blau, Hauptverarbeitungsschritte in gelb, Resultate in grün.
-					<!-- Overview of the CRAMT toolkit. User inputs in blue, main processing steps in yellow and resulting artifacts in green. -->
-				</figcaption>
-			</figure>
-
-			<!-- <div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="CRAMT-Tool-OverviewSimpleSlick.png" alt="tum logo">
-			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Daten Sammeln </titlebar>
-		<mybody>
-			<figure class="h-[80vh] w-[60vw]">
-				<img src="CRAMT-Tool-CollectWebdata.png" alt="crawling01" class="mx-auto">
-				<figcaption class="text-[4.0vh]">
-					Durchforsten des Internets auf zweierlei Art.
-					<!-- Overview of the CRAMT toolkit. User inputs in blue, main processing steps in yellow and resulting artifacts in green. -->
-				</figcaption>
-			</figure>
-			<!-- <div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="CRAMT-Tool-CollectWebdata.png" alt="selenium crawling">
-			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Umgehen von Sprachbarrieren </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[70vh] align-middle" src="CRAMT-Tool-TextAlignmentsOverviewMulti.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
-
-	<Slide><Layout>
-		<titlebar > Extraschritte über Drittsprache </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[70vh] align-middle" src="CRAMT-Tool-TextAlignmentsGer.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
-
-	<!-- <Slide><Layout>
-		<titlebar > Bilingual Lexicon Induction (TODO) </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="title-banner.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide> -->
-
-
-	<!-- <script> newChapter("Design \& Development"); </script> -->
-	
-
-	<!-- <script> newChapter("Used Tools"); </script> -->
-	
-	
-	<!-- <Slide><Layout>
-		<titlebar > Potato (TODO) </titlebar>
-		<mybody>
-			<div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="title-banner.png" alt="tum logo">
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide> -->
-
-	<!-- <script> newChapter("Data Quality"); </script> -->
-	<script> newChapter("Menge und Qualität von Daten"); </script>
-
-	<Slide><Layout>
-		<titlebar > Über viele Wege nach Rom </titlebar>
-		<mybody>
-			<figure class="h-[30vh] w-[95vw] float-left mx-auto my-auto">
-				<img src="CRAMT-Tool-WordAlignmentExample.png" alt="ambiguities1" class="h-[30vh]">
-				<figcaption class="w-[93vw] text-[4.0vh]">
-					Neue Übersetzungen über mehrere Sprachen hinweg- Angenommen, diese sind transitiv.
-					<!-- Finding new word alignments by traversing multiple cross-lingual alignments and assuming these relations to be transitive. -->
-				</figcaption>
-			</figure>
-			<!-- <div class="flex items-center justify-center">
+	<Slide
+		><Layout>
+			<titlebar> Language Ambiguities I </titlebar>
+			<mybody>
+				<figure class="h-[30vh] w-[95vw] float-left mx-auto my-auto">
+					<img
+						src="CRAMT-Tool-WordAlignmentExample.png"
+						alt="ambiguities1"
+						class="h-[30vh]"
+					/>
+					<figcaption class="w-[93vw]">
+						Finding new word alignments by traversing multiple cross-lingual
+						alignments and assuming these relations to be transitive.
+					</figcaption>
+				</figure>
+				<!-- <div class="flex items-center justify-center">
 				<img class="h-[30vh] w-[95vw] align-middle" src="CRAMT-Tool-WordAlignmentExample.png" alt="tum logo">
 			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Vieldeutigkeit der Sprache - Fluch </titlebar>
-		<mybody>
-			<figure class="h-[80vh] w-[90vw] float-left mx-auto my-auto">
-				<img src="CRAMT-Tool-WordAlignmentLimitation.png" alt="ambiguities2" class="h-[70vh]">
-				<figcaption class="w-[93vw] text-[4.0vh]">
-					Das Wort "Grün" übersetzt von "Google Translate".
-					<!-- The word ambiguity during translation of the German Grün into the English green resulting in additional translation candidates. -->
-				</figcaption>
-			</figure>
+	<Slide
+		><Layout>
+			<titlebar> Language Ambiguities II </titlebar>
+			<mybody>
+				<figure class="h-[80vh] w-[95vw] float-left mx-auto my-auto">
+					<img
+						src="CRAMT-Tool-WordAlignmentLimitation.png"
+						alt="ambiguities2"
+						class="h-[70vh]"
+					/>
+					<figcaption class="w-[93vw]">
+						The word ambiguity during translation of the German Grün into the
+						English green resulting in additional translation candidates.
+					</figcaption>
+				</figure>
 
-			<!-- <div class="flex items-center justify-center">
+				<!-- <div class="flex items-center justify-center">
 				<img class="h-[70vh] w-[95vw] align-middle" src="CRAMT-Tool-WordAlignmentLimitation.png" alt="tum logo">
 			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Vieldeutigkeit der Sprache - Segen? </titlebar>
-		<mybody>
-			<figure class="h-[80vh] w-[90vw] float-left mx-auto my-auto">
-				<img src="CRAMT-Tool-WordAlignmentLimitationExample.png" alt="ambiguities1" class="h-[65vh]">
-				<figcaption class="w-[93vw] text-[4.0vh]">
-					Um zunächst möglichst viele Daten zu bekommen, lohnt es sich teilweise, alternative Übersetzungen weiter zu verfolgen.
-					<!-- Continuing on ambiguous translations (red) instead of aggregating to the most likely candidate (green) can enrich a dataset with additional labels across languages (blue). -->
-				</figcaption>
-			</figure>
+	<Slide
+		><Layout>
+			<titlebar> Language Ambiguities III </titlebar>
+			<mybody>
+				<figure class="h-[80vh] w-[95vw] float-left mx-auto my-auto">
+					<img
+						src="CRAMT-Tool-WordAlignmentLimitationExample.png"
+						alt="ambiguities1"
+						class="h-[70vh]"
+					/>
+					<figcaption class="w-[93vw]">
+						Continuing on ambiguous translations (red) instead of aggregating to
+						the most likely candidate (green) can enrich a dataset with
+						additional labels across languages (blue).
+					</figcaption>
+				</figure>
 
-			<!-- <div class="flex items-center justify-center">
+				<!-- <div class="flex items-center justify-center">
 				<img class="h-[70vh] w-[95vw] align-middle" src="CRAMT-Tool-WordAlignmentLimitationExample.png" alt="tum logo">
 			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > Menschen als Datenquelle (Beispiel: Vietnamesisch)</titlebar> 
-		<mybody>
-			<div class="grid" style="grid-template-columns: 1fr 2fr 2fr ; mx-auto my-auto;">
-				<div>
-					<a href="http://schuler-christian.de/">
-						<div class="flex items-center justify-center">
-							<img class="h-[20vh] align-middle" src="title-banner.png" alt="Potato Task Link">
-						</div>
-					</a>
-					<img class="w-[30vw] align-middle" src="mtacr-potato-login.png" alt="Potato Login">
-				</div>
-				
-				<div>
-					<Step fadeRight>
-						<img class="h-[70vh] align-middle" src="mtacr-potato-nllb-mfe.png" alt="Potato Login">
-					</Step>
-				</div>
-				<div>
-					<Step fadeRight>
-						<img class="h-[70vh] align-middle" src="mtacr-potato-flickr30k-vie.png" alt="Potato Login">
-					</Step>
-				</div>
-				
-				<!-- <Step fadeRight>
-					<img class="h-[70vh] align-middle" src="mtacr-potato-pos.png" alt="Potato Login">
-				</Step> -->
-			</div>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes>
-	</Slide>
-
-	<!-- Annotation via Anchor Items  -->
-	<Slide><Layout>
-		<titlebar > 100 Leute - 100 Meinungen </titlebar>
-		<mybody>
-			<!-- <div class="flex items-center justify-center"> -->
-				<figure class="h-[80vh] w-[90vw] items-center justify-center">
-					<img src="CRAMT-Tool-AnnotationQuality.png" alt="quality_control" class="h-[65vh] align-middle">
-					<figcaption class="w-[93vw] text-[4.0vh]">
-						Um Übersetzer nicht mit Arbeit zu erschlagen, wird der Datensatz aufgeteilt.<br>
-						Zudem helfen "Anker-Sätze", die Übereinstimmung zwischen den Übersetzern zu ermitteln.
+	<script>
+		newChapter('Design & Development')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> Overview of CRAMT </titlebar>
+			<mybody>
+				<figure class="h-[80vh] w-[70vw]">
+					<img
+						src="CRAMT-Tool-OverviewSimpleSlick.png"
+						alt="ambiguities1"
+						class="mx-auto"
+					/>
+					<figcaption>
+						Overview of the CRAMT toolkit. User inputs in blue, main processing
+						steps in yellow and resulting artifacts in green.
 					</figcaption>
 				</figure>
-			<!-- </div> -->
-			<!-- <div class="flex items-center justify-center">
-				<img class="h-[75vh] align-middle" src="CRAMT-Tool-AnnotationQuality.png" alt="tum logo">
+
+				<!-- <div class="flex items-center justify-center">
+				<img class="h-[75vh] align-middle" src="CRAMT-Tool-OverviewSimpleSlick.png" alt="tum logo">
 			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
+	<script>
+		newChapter('Used Tools')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> GlotLID (TODO) </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[75vh] align-middle"
+						src="title-banner.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<script> newChapter("Aktueller Stand"); </script>
-	<Slide><Layout>
-		<titlebar > Bisher Gesammelte Daten </titlebar>
-		<mybody>
-			<div class="grid" style="grid-template-columns: auto auto; mx-auto my-auto;">
-				<img src="mtacr-2024-april.png" alt="Data Kob Mfe" class="w-[45vw] h-[40vh]">
-				<Step fadeRight><img src="mtacr-2024-april-targets.png" alt="Data Kob Mfe" class="w-[45vw] h-[40vh]"></Step>
-				<Step fadeDown><img src="mtacr-2024-april-noeng.png" alt="Data Kob Mfe" class="w-[45vw] h-[40vh]"></Step>
-				<Step fadeDown><img src="mtacr-2024-april-all.png" alt="Data Kob Mfe" class="w-[45vw] h-[40vh]"></Step>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+	<Slide
+		><Layout>
+			<titlebar> Potato (TODO) </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[75vh] align-middle"
+						src="title-banner.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
+	<script>
+		newChapter('Data Quality')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> Annotation via Anchor Items </titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<img
+						class="h-[75vh] align-middle"
+						src="CRAMT-Tool-AnnotationQuality.png"
+						alt="tum logo"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<!-- <script> newChapter("Future Work"); </script> -->
-	<Slide><Layout>
-		<titlebar > Sprachen und Daten, die auf uns warten </titlebar>
-		<mybody>
-			<div class="grid" style="grid-template-columns: auto auto auto; mx-auto my-auto;">
-				<!-- Images -->
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="Kurmanjî-wordcloud.png" alt="kurmanji" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						Kurmanji
-					</figcaption>
-				</figure>
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="Morisien-wordcloud.png" alt="morisien" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						Morisien
-					</figcaption>
-				</figure>
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="Vietnamese-wordcloud.png" alt="vietnamese" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						Vietnamese
-					</figcaption>
-				</figure>
+	<script>
+		newChapter('Future Work')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> Language Data waiting to be collected </titlebar>
+			<mybody>
+				<div
+					class="grid"
+					style="grid-template-columns: auto auto auto; mx-auto my-auto;"
+				>
+					<!-- Images -->
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img src="Kurmanjî-wordcloud.png" alt="kurmanji" class="h-[30vh]" />
+						<figcaption class="text-[2.3vh]">Kurmanji</figcaption>
+					</figure>
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img src="Morisien-wordcloud.png" alt="morisien" class="h-[30vh]" />
+						<figcaption class="text-[2.3vh]">Morisien</figcaption>
+					</figure>
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img
+							src="Vietnamese-wordcloud.png"
+							alt="vietnamese"
+							class="h-[30vh]"
+						/>
+						<figcaption class="text-[2.3vh]">Vietnamese</figcaption>
+					</figure>
 
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="Chinese-wordcloud.png" alt="chinese" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						Chinese
-					</figcaption>
-				</figure>
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="German-wordcloud.png" alt="german" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						German
-					</figcaption>
-				</figure>
-				<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
-					<img src="English-wordcloud.png" alt="english" class="h-[30vh]">
-					<figcaption class="text-[2.3vh]">
-						English
-					</figcaption>
-				</figure>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img src="Chinese-wordcloud.png" alt="chinese" class="h-[30vh]" />
+						<figcaption class="text-[2.3vh]">Chinese</figcaption>
+					</figure>
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img src="German-wordcloud.png" alt="german" class="h-[30vh]" />
+						<figcaption class="text-[2.3vh]">German</figcaption>
+					</figure>
+					<figure class="h-[35vh] w-[30vw] float-left mx-auto my-auto">
+						<img src="English-wordcloud.png" alt="english" class="h-[30vh]" />
+						<figcaption class="text-[2.3vh]">English</figcaption>
+					</figure>
+				</div></mybody
+			>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-	<Slide><Layout>
-		<titlebar > La Ende im Gelände </titlebar>
-		<mybody>
-			<div class="grid" style="grid-template-columns: auto; mx-auto my-auto;">
-				<a href="https://github.com/christianschuler8989/CRAMT">
-					<img src="CRAMT-Tool-Logo.png" alt="CRAMT Logo" class="h-[30vh]">
-					<figcaption class="text-[7.0vh]">
-						Weitere Information und zukünftige Entwicklungen: <br><br>
-						https://github.com/christianschuler8989/CRAMT <br>
-					</figcaption>
-				</a>
-			</div>
-			
-			<!-- <div>
-				<a href="https://github.com/christianschuler8989/CRAMT">
-					<div class="text-[3.5vh]">
-						https://github.com/christianschuler8989/CRAMT
-					</div>
-				</a>
-			</div> -->
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide>
+	<script>
+		newChapter('Conclusion')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar> Three-fold Outcome </titlebar>
+			<mybody>
+				<ul class="a">
+					<li>
+						1. Text Corpus for specific target languages aiming to provide new
+						aligned text data.
+					</li>
+					<br />
+					<li>
+						2. Analysis of the collected and aligned data.
+						<br />Some help to get a quick idea of the data distribution such as
+						generated word clouds,
+						<br />but also reports to provide deeper insights about the data.
+					</li>
+					<br />
+					<li>
+						3. Datasheet that can represent and explain the newly created
+						dataset and its purpose.
+					</li>
+				</ul></mybody
+			>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
-
-	
-
-
-	<!-- <script> newChapter("References"); </script>
-	<Slide><Layout>
-		<titlebar > Poster-Related References (TODO) </titlebar>
-		<mybody>
-			<ul class="a" >
-				<li>Ahmadi, (2020)</li>
-				<li>Yu, et al., (2022)</li>
-				<li>Artetxe, et al., (2022)</li>
-				<li>Kreutzer, et al., (2022)</li>
-				<li>Vulić, et al., (2013)</li>
-				<li>Gouws, et al., (2016)</li>
-				<li>Bafna, et al., (2023)</li>
-				<li>Karakante, et al., (2018)</li>
-				<li>Reimers, et al., (2020)</li>
-				<li>de Vries, et al., (2021)</li>
-				<li>Yimam, et al., (2020)</li>
-				<li>Millour, et al., (2020)</li>
-				<li>Lent, et al., (2022)</li>
-				<li>Liu, et al., (2022)</li>
-				<li>Cahyawijaya, et al., (2023)</li>
-				<li>Pei, et al., (2022)</li>
-				<li>Kargaran, et al., (2023)</li>
-				<li>Haig, (2001)</li>
-			</ul>
-		</mybody>
-	</Layout>
-	<Notes>
-		These are some presenter notes that can help during the actual presentation.<br>
-		They are displayed on the presenter's screen if "presenter mode" has been entered.
-	</Notes></Slide> -->
+	<script>
+		newChapter('Referenzen')
+	</script>
+	<Slide
+		><Layout>
+			<!-- <titlebar > Poster-Related References (TODO) </titlebar> -->
+			<mybody>
+				<ul class="a">
+					<li>Ahmadi, (2020)</li>
+					<li>Yu, et al., (2022)</li>
+					<li>
+						wsj.com <a
+							href="https://www.wsj.com/tech/ai/ai-energy-consumption-fc79d94f"
+							>, (2024)</a
+						>
+					</li>
+					<li>
+						Ingenieur.de<a
+							href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/"
+							>, (2023)</a
+						>
+					</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes>
+			These are some presenter notes that can help during the actual
+			presentation.<br />
+			They are displayed on the presenter's screen if "presenter mode" has been entered.
+		</Notes></Slide
+	>
 
 	<!-- to mimic the latex template  -->
+	<!-- to mimic the latex template  -->
+	<!-- to mimic the latex template  -->
+	<!-- to mimic the latex template  -->
+	<!-- to mimic the latex template  -->
 	<script>
-		const totalSlides = document.getElementsByTagName('pagenumber').length;
-		const totalChapters = chapterNames.length;
-		var temp; 
+		const totalSlides = document.getElementsByTagName('pagenumber').length
+		const totalChapters = chapterNames.length
+		var temp
 		for (let i = 0; i < totalSlides; i++) {
 			// one section, one slide
-			document.getElementsByTagName('section')[i].setAttribute("id", "slide-"+(i+1));
-			// add author name 
-			document.getElementsByTagName('author')[i].innerText=authorshort;
-			// add title 
-			document.getElementsByTagName('mytitle')[i].innerHTML="<a href=\"#slide-1\">"+title+"</a>";
+			document
+				.getElementsByTagName('section')
+				[i].setAttribute('id', 'slide-' + (i + 1))
+			// add author name
+			document.getElementsByTagName('author')[i].innerText = authorshort
+			// add title
+			document.getElementsByTagName('mytitle')[i].innerHTML =
+				'<a href="#slide-1">' + title + '</a>'
 			// show slide number with total slide number
-			document.getElementsByTagName("pagenumber")[i].innerHTML = (i+1)+"/"+totalSlides;
+			document.getElementsByTagName('pagenumber')[i].innerHTML =
+				i + 1 + '/' + totalSlides
 		}
 		for (let i = 0; i < totalSlides; i++) {
 			for (let j = 0; j < totalChapters; j++) {
 				// fill in chapter names
-				temp = document.querySelectorAll("table.topbar")[i]; 
-				temp.getElementsByTagName("tr")[0].innerHTML += "<th data-chpcol=\"chpcol\" style=\"font-weight:normal\">"+chapterNames[j]+"</th>";
-				// document.getElementsByTagName("test")[0].innerHTML="here!"; 
+				temp = document.querySelectorAll('table.topbar')[i]
+				temp.getElementsByTagName('tr')[0].innerHTML +=
+					'<th data-chpcol="chpcol" style="font-weight:normal">' +
+					chapterNames[j] +
+					'</th>'
+				// document.getElementsByTagName("test")[0].innerHTML="here!";
 				// fill in dots
-				let slidesInChapter = presentationData.filter(item => item.chapter == chapterNames[j]);
-				let begin = slidesInChapter[0].pagenr;
-				let end = slidesInChapter[slidesInChapter.length-1].pagenr;
-				let circles=toCircle(begin,end);
-				temp.getElementsByTagName("tr")[1].innerHTML += "<td>"+ circles +"</td>";
+				let slidesInChapter = presentationData.filter(
+					(item) => item.chapter == chapterNames[j]
+				)
+				let begin = slidesInChapter[0].pagenr
+				let end = slidesInChapter[slidesInChapter.length - 1].pagenr
+				let circles = toCircle(begin, end)
+				temp.getElementsByTagName('tr')[1].innerHTML +=
+					'<td>' + circles + '</td>'
 			}
 		}
 		for (let i = 0; i < totalSlides; i++) {
-			// first, find out if title page and toc exist 
-			let chapter0 = presentationData.filter(item => item.chapternr == 0).length;
-			if (i>=chapter0){
+			// first, find out if title page and toc exist
+			let chapter0 = presentationData.filter(
+				(item) => item.chapternr == 0
+			).length
+			if (i >= chapter0) {
 				// then set corresponding circle to white
-				let circle = document.getElementsByTagName("circle-"+(i+1))[i]; 
-				circle.style.background="white";
-				circle.style.border="0px";
-				// also the chapter names 
-				let chapterNr = presentationData.filter(item => item.pagenr == i+1)[0].chapternr;
-				temp = document.getElementsByTagName("th")[(i)*(totalChapters)+chapterNr-1];
-				if (temp.hasAttribute("data-chpcol")){ 
-					temp.style.color="white";
+				let circle = document.getElementsByTagName('circle-' + (i + 1))[i]
+				circle.style.background = 'white'
+				circle.style.border = '0px'
+				// also the chapter names
+				let chapterNr = presentationData.filter(
+					(item) => item.pagenr == i + 1
+				)[0].chapternr
+				temp =
+					document.getElementsByTagName('th')[i * totalChapters + chapterNr - 1]
+				if (temp.hasAttribute('data-chpcol')) {
+					temp.style.color = 'white'
 				}
 			}
 		}
 		// circles: start, start+1, . . . , end are created
-		function toCircle(begin,end){
-			let circles = ""; 
-			for (let i=begin; i<=end; i++){
-				circles+="<a href=\"#slide-" +i+ "\"><circle-" +i+ " class=\"dot\"> </circle-" +i+ "> </a>" ;
+		function toCircle(begin, end) {
+			let circles = ''
+			for (let i = begin; i <= end; i++) {
+				circles +=
+					'<a href="#slide-' +
+					i +
+					'"><circle-' +
+					i +
+					' class="dot"> </circle-' +
+					i +
+					'> </a>'
 			}
-			return circles;
+			return circles
 		}
 		// to create table of contents
 		if (toc) {
-			for (i=1; i<=chapterNames.length;i++){
-				document.getElementsByTagName('chpicons')[0].innerHTML += "<div class=\"chpicon\">"+i+"</div> <br>";
-				document.getElementsByTagName('chpnames')[0].innerHTML += "<div>"+chapterNames[i-1]+"</div> <br>";
+			for (i = 1; i <= chapterNames.length; i++) {
+				document.getElementsByTagName('chpicons')[0].innerHTML +=
+					'<div class="chpicon">' + i + '</div> <br>'
+				document.getElementsByTagName('chpnames')[0].innerHTML +=
+					'<div>' + chapterNames[i - 1] + '</div> <br>'
 			}
 		}
 	</script>
-	
+
 	<style>
-		.chpicon{
+		.chpicon {
 			color: white;
-			width:180%;
+			width: 180%;
 			background: var(--themecolor);
 		}
 		.dot {
 			height: 15px;
 			width: 15px;
-			background: rgba(0,0,0,0);
+			background: rgba(0, 0, 0, 0);
 			border-radius: 50%;
 			border: 1.5px solid var(--themecolorlight);
 			display: inline-block;
 		}
 		ul.a {
 			list-style-type: square;
-			padding-top:5vh;
+			padding-top: 5vh;
 		}
 		ul.b {
 			list-style-type: circle;
-			margin-left:5vh;
-			margin-right:5vh;
-			padding-top:1vh;
-			padding-bottom:1vh;
+			margin-left: 5vh;
+			margin-right: 5vh;
+			padding-top: 1vh;
+			padding-bottom: 1vh;
 		}
 		ul.c {
 			list-style-type: disc;
-			margin-left:10vh;
-			margin-right:5vh;
-			padding-top:1vh;
-			padding-bottom:1vh;
+			margin-left: 10vh;
+			margin-right: 5vh;
+			padding-top: 1vh;
+			padding-bottom: 1vh;
 		}
-		ul{
+		ul {
 			text-align: left;
-			margin-left:20vh;
-			margin-right:5vh;
-			padding-top:1vh;
-			padding-bottom:1vh;
+			margin-left: 20vh;
+			margin-right: 5vh;
+			padding-top: 1vh;
+			padding-bottom: 1vh;
 		}
-		titlebar{
-			display:flex;
-			background: rgb(242,242,242); 
-			width: 100vw; 
-			height: 9vh; 
+		titlebar {
+			display: flex;
+			background: rgb(242, 242, 242);
+			width: 100vw;
+			height: 9vh;
 			text-align: left;
-			padding-left: 5vh; 
+			padding-left: 5vh;
 			padding-top: 2vh;
 			font-size: 5vh;
 		}
-		mybody{
+		mybody {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height:79vh;
+			height: 79vh;
 		}
 		figure {
 			border: 0px #cccccc solid;
@@ -903,7 +987,7 @@
 			margin: auto;
 		}
 		figcaption {
-			background-color: rgb(242,242,242);
+			background-color: rgb(242, 242, 242);
 			color: black;
 			font-style: italic;
 			padding: 2px;

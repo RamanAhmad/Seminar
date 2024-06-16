@@ -25,7 +25,7 @@
 		--tumblue: #0065BD;
 		--secondblue: #8AB1DA;
 		--uhhred: #811b27;
-		--firstred: #cf6161;
+		--firstred: #61cf70;
 		--secondred: #694343;
 		--themecolor: var(--firstred);
 		--themecolorlight: var(--secondred);
