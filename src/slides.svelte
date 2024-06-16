@@ -383,7 +383,7 @@
 					<div class="flex-1">
 						<ul>
 							<li style="margin-bottom: 2px; font-size: 0.6em;">
-								"KI ist alles andere als grün"
+								"KI ist alles andere als grün."
 							</li>
 							<br />
 							<li style="margin-bottom: 10px; font-size: 0.6em;">
@@ -391,6 +391,9 @@
 							</li>
 							<li style="margin-bottom: 10px; font-size: 0.6em;">
 								• KI benötigt im Vergleich zum menschlichen Gehirn deutlich mehr Energie.
+							</li>
+							<li style="margin-bottom: 10px; font-size: 0.6em;">
+								• BERT kann CO2-Fußabdruck eines transamerikanischen Fluges erreichen.
 							</li>
 						</ul>
 					</div>
