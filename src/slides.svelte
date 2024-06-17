@@ -134,8 +134,8 @@
 			<titlebar>Gliederung</titlebar>
 			<mybody class="textStyle">
 				<ul>
-					<li>1. Grundlagen von Rechenzentren und Energieverbrauch</li>
-					<li>2. Energieverbrauch in der KI</li>
+					<li>1. Grundlagen des Maschinellen Lernens</li>
+					<li>2. Energieverbrauch in ML-Anwendungen</li>
 					<li>3. Spezifische Studienergebnisse und deren Interpretation</li>
 					<li>4. Nachhaltigkeit und Optimierungspotenziale</li>
 					<li>5. Herausforderungen und zukünftige Entwicklungen</li>
@@ -173,57 +173,46 @@
 	</Slide>
 
 	<script>
-		newChapter('RZ')
+		newChapter('ML')
 	</script>
-	<Slide
-		><Layout>
-			<titlebar>Rechenzentren</titlebar>
-			<mybody>
-				<div class="flex items-center justify-center">
-					<div class="flex-1">
-						<p style="font-size: 0.8em;">Definition</p>
-						<br />
-						<p style="font-size: 0.5em;">
-							IT-Betriebsbereiche, aus denen heraus <br /> Dienste/Dienstleistungen
-							für Dritte erbracht werden, sind immer als RZ zu betrachten. Dabei
-							ist es unerheblich, ob diese Erbringung gegen Entgelt erfolgt oder
-							nicht.*
-						</p>
-						<br />
-						<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
-						<p style="font-size: 0.3em;">* BSI</p>
-					</div>
-					<div class="flex-1 flex items-center justify-center flex-col">
-						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
-						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
-					</div>
-				</div>
-			</mybody>
+	<!--Definition ML-->
+	<Slide>
+		<Layout>
+		  <titlebar>Definition - ML</titlebar>
+		  <mybody>
+			<div class="flex items-center justify-center">
+			  <div class="flex-1" style="padding-left: 20px; margin-right: 10px;">
+				<br />
+				<br />
+				<p style="font-size: 0.6em;">
+				  "Maschinelles Lernen ist ein Teilbereich der künstlichen Intelligenz.
+				</p>
+				<p style="font-size: 0.6em;">
+				  Der Schwerpunkt liegt dabei auf dem Trainieren von Computern,
+				</p>
+				<p style="font-size: 0.6em;">
+				  um aus Daten und Erfahrungen zu lernen und sich stets zu verbessern – anstatt explizit dafür programmiert zu werden*"
+				</p>
+				<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+				<p style="font-size: 0.3em;">* sap.com</p>
+			  </div>
+			  <div class="flex-1 flex items-center justify-center flex-col">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<img
+				  class="h-[50vh] align-middle mb-2"
+				  src="machine_learning-iberdrola.com.jpg"
+				/>
+				<div class="text-xs mt-auto">Quelle: iberdrola.com</div>
+			  </div>
+			</div>
+		  </mybody>
 		</Layout>
-		<Notes></Notes></Slide
-	>
+		<Notes></Notes>
+	  </Slide>
+	  
 
-	<Slide
-		><Layout>
-			<titlebar>Rechenzentren</titlebar>
-			<mybody>
-				<div class="flex items-center justify-center">
-					<div class="flex-1">
-						<p style="font-size: 0.8em;">Definition</p>
-						<br />
-						<p style="font-size: 0.6em;">
-							Gebäude zur Unterbringung und Betrieb von IT-Infrastruktur
-						</p>
-					</div>
-					<div class="flex-1 flex items-center justify-center flex-col">
-						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
-						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
-					</div>
-				</div>
-			</mybody>
-		</Layout>
-		<Notes></Notes></Slide
-	>
+
+
 
 	<script>
 		newChapter('RZ & EV')
@@ -362,6 +351,7 @@
 						<p style="font-size: 0.3em;">* spektrum.de</p>
 					</div>
 					<div class="flex-1 flex items-center justify-center flex-col">
+						<!-- svelte-ignore a11y-missing-attribute -->
 						<img
 							class="h-[70vh] align-middle mb-2"
 							src="energy-consumption.jpg"
@@ -442,6 +432,59 @@
 			presentation.<br />
 			They are displayed on the presenter's screen if "presenter mode" has been entered.
 		</Notes></Slide
+	>
+
+	<script>
+		newChapter('Sonstiges')
+	</script>
+	<Slide
+		><Layout>
+			<titlebar>Rechenzentren</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1">
+						<p style="font-size: 0.8em;">Definition</p>
+						<br />
+						<p style="font-size: 0.5em;">
+							IT-Betriebsbereiche, aus denen heraus <br /> Dienste/Dienstleistungen
+							für Dritte erbracht werden, sind immer als RZ zu betrachten. Dabei
+							ist es unerheblich, ob diese Erbringung gegen Entgelt erfolgt oder
+							nicht.*
+						</p>
+						<br />
+						<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+						<p style="font-size: 0.3em;">* BSI</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
+						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
+					</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+
+	<Slide
+		><Layout>
+			<titlebar>Rechenzentren</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1">
+						<p style="font-size: 0.8em;">Definition</p>
+						<br />
+						<p style="font-size: 0.6em;">
+							Gebäude zur Unterbringung und Betrieb von IT-Infrastruktur
+						</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<img class="h-[50vh] align-middle mb-2" src="Rechenzentrum.jpg" />
+						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
+					</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
 	>
 
 	<!-- to mimic the latex template  -->
