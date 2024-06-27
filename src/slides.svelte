@@ -94,6 +94,7 @@
 			<!-- fill in the data for this presentation  -->
 			<!-- fill in the data for this presentation  -->
 			<!-- fill in the data for this presentation  -->
+			<!-- fill in the data for this presentation  -->
 			<script>
 				document.getElementById('mytitle').innerHTML = title
 				document.getElementById('mysubtitle').innerHTML = subtitle
@@ -126,6 +127,7 @@
 	<!-- intro -->
 	<!-- intro -->
 	<!-- intro -->
+	<!-- intro -->
 	<script>
 		newChapter('Gliederung')
 	</script>
@@ -134,12 +136,13 @@
 			<titlebar>Gliederung</titlebar>
 			<mybody class="textStyle">
 				<ul>
-					<li>1. Grundlagen des Maschinellen Lernens</li>
-					<li>2. Energieverbrauch in ML-Anwendungen</li>
-					<li>3. Spezifische Studienergebnisse und deren Interpretation</li>
-					<li>4. Nachhaltigkeit und Optimierungspotenziale</li>
-					<li>5. Herausforderungen und zukünftige Entwicklungen</li>
-					<li>6. Fazit</li>
+					<li>1. Maschinelles Lernen</li>
+					<li>2. Rechenzentren und Energieverbrauch</li>
+					<li>3. Energieverbrauch in der KI</li>
+					<li>4. Studienergebnisse und deren Interpretation</li>
+					<li>5. Leitfrage</li>
+					<li>6. Sclussfolgerung</li>
+					<li>7. Referenzen</li>
 				</ul>
 			</mybody>
 		</Layout>
@@ -155,22 +158,48 @@
 	</script>
 	<Slide>
 		<Layout>
-			<titlebar>Frage | Gedankenexperiment</titlebar>
+			<titlebar>Frage</titlebar>
 			<mybody>
 				<ul>
 					<li>
-						Wenn ihr euch aus Protest für den Umweltschutz irgendwo festkleben
-						könntet, wo würde das sein?
+						Wie viel CO₂-Emissionen werden geschätzt, dass das Training eines
+						großen maschinellen Lernmodells wie GPT-3 verursacht?
 					</li>
 					<br />
-					<li style="margin-bottom: 10px;">1. Auf der Autobahn</li>
-					<li style="margin-bottom: 10px;">2. Am Flughafen</li>
-					<li style="margin-bottom: 10px;">3. Vor einem KI-Unternehmen</li>
-					<li style="margin-bottom: 10px;">4. Auf Zuggleise</li>
+					<li style="margin-bottom: 10px;">
+						A) So viel wie ein Kühlschrank in einem Jahr
+					</li>
+					<li style="margin-bottom: 10px;">
+						B) So viel wie ein Auto in einem Jahr
+					</li>
+					<li style="margin-bottom: 10px;">
+						C) So viel wie fünf Autos in ihrem gesamten Lebenszyklus
+					</li>
 				</ul>
 			</mybody>
 		</Layout>
 	</Slide>
+
+	<Slide
+		><Layout>
+			<titlebar>ChatGPT Frage-Antwort</titlebar>
+			<mybody>
+				<ul>
+					<li style="font-size: 0.6em;">
+						Ich möchte mein Seminar mit einer Frage anfangen, kannst du mir
+						bitte eine Frage bezüglich meiner Präsentation formulieren?
+					</li>
+					<br />
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img class="h-[50vh] align-middle mb-2" src="ChatGPT-Frage.jpg" />
+						<div class="text-xs mt-auto">Quelle: ChatGPT</div>
+					</div>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
 	<script>
 		newChapter('ML')
@@ -178,41 +207,81 @@
 	<!--Definition ML-->
 	<Slide>
 		<Layout>
-		  <titlebar>Definition - ML</titlebar>
-		  <mybody>
-			<div class="flex items-center justify-center">
-			  <div class="flex-1" style="padding-left: 20px; margin-right: 10px;">
-				<br />
-				<br />
-				<p style="font-size: 0.6em;">
-				  "Maschinelles Lernen ist ein Teilbereich der künstlichen Intelligenz.
-				</p>
-				<p style="font-size: 0.6em;">
-				  Der Schwerpunkt liegt dabei auf dem Trainieren von Computern,
-				</p>
-				<p style="font-size: 0.6em;">
-				  um aus Daten und Erfahrungen zu lernen und sich stets zu verbessern – anstatt explizit dafür programmiert zu werden*"
-				</p>
-				<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
-				<p style="font-size: 0.3em;">* sap.com</p>
-			  </div>
-			  <div class="flex-1 flex items-center justify-center flex-col">
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<img
-				  class="h-[50vh] align-middle mb-2"
-				  src="machine_learning-iberdrola.com.jpg"
-				/>
-				<div class="text-xs mt-auto">Quelle: iberdrola.com</div>
-			  </div>
-			</div>
-		  </mybody>
+			<titlebar>Definition - ML</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1" style="padding-left: 20px; margin-right: 10px;">
+						<br />
+						<br />
+						<p style="font-size: 0.6em;">
+							"Maschinelles Lernen ist ein Teilbereich der künstlichen
+							Intelligenz.
+						</p>
+						<p style="font-size: 0.6em;">
+							Der Schwerpunkt liegt dabei auf dem Trainieren von Computern,
+						</p>
+						<p style="font-size: 0.6em;">
+							um aus Daten und Erfahrungen zu lernen und sich stets zu
+							verbessern – anstatt explizit dafür programmiert zu werden*"
+						</p>
+						<hr style="border-top: 1px solid #ccc; margin: 8px 0;" />
+						<p style="font-size: 0.3em;">* sap.com</p>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							class="h-[50vh] align-middle mb-2"
+							src="machine_learning-iberdrola.com.jpg"
+						/>
+						<div class="text-xs mt-auto">Quelle: iberdrola.com</div>
+					</div>
+				</div>
+			</mybody>
 		</Layout>
 		<Notes></Notes>
-	  </Slide>
-	  
+	</Slide>
 
+	<Slide>
+		<Layout>
+			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
+			<div
+				class="grid mt-[5%] mx-[10%]"
+				style="grid-template-columns: 1fr 1fr;"
+			>
+				<img src="Image-Processing-bigml.jpg" class="h-[45vh] object-cover" />
+				<div
+					class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
+				>
+					Bildverarbeitung
+				</div>
+				<img
+					src="Image-Processing-researchgate.jpg"
+					class="h-[45vh] object-cover"
+				/>
+			</div>
+		</Layout>
+	</Slide>
 
-
+	<Slide>
+		<Layout>
+			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
+			<div class="grid mt-[7%] mx-[3%]" style="grid-template-columns: 1fr 1fr;">
+				<img
+					src="Speech-Recognition-pylessons.jpg"
+					class="h-[45vh] object-cover"
+				/>
+				<div
+					class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
+				>
+					Sprachverarbeitung und -erkennung
+				</div>
+				<img
+					src="Speech-Recognition-Kardome.jpg"
+					class="h-[45vh] object-cover"
+				/>
+			</div>
+		</Layout>
+	</Slide>
 
 	<script>
 		newChapter('RZ & EV')
@@ -271,8 +340,7 @@
 						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
 					</li>
 					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Rechenzentren verursachen CO2-Emissionen, etwa 0,3 % der globalen
-						Emissionen.
+						• Rechenzentren verbrauchen zwei Prozent des globalen Strombedarfs
 					</li>
 				</ul>
 			</mybody>
@@ -295,13 +363,42 @@
 						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
 					</li>
 					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Rechenzentren verursachen CO2-Emissionen, etwa 0,3 % der globalen
-						Emissionen.
+						• Rechenzentren verbrauchen zwei Prozent des globalen Strombedarfs
 					</li>
 					<li style="margin-bottom: 10px; font-size: 0.6em;">
 						• Das ist mehr als der nationale Energieverbrauch einiger Länder,
 						z.B. Iran.
 					</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	><!--5. RZ & EV-->
+	<Slide
+		><Layout>
+			<titlebar>RZ und Energieverbrauch</titlebar>
+			<mybody>
+				<ul>
+					<li style="margin-bottom: 10px;">
+						"Obwohl Rechenzentren keinen schwarzen Rauch ausstoßen oder fettige
+						Zahnräder mahlen, sind sie nicht frei von Umweltauswirkungen"
+					</li>
+					<br />
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verbrauchen jährlich ca. 200 TWh.
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verbrauchen zwei Prozent des globalen Strombedarfs
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Das ist mehr als der nationale Energieverbrauch einiger Länder,
+						z.B. Iran.
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Rechenzentren verursachen CO2-Emissionen, etwa 0,3 % der globalen
+						Emissionen.
+					</li>
+				
 				</ul>
 			</mybody>
 		</Layout>
@@ -364,8 +461,8 @@
 		<Notes></Notes></Slide
 	>
 
-		<!--2. EV & KI-->
-		<Slide
+	<!--2. EV & KI-->
+	<Slide
 		><Layout>
 			<titlebar>Energieverbrauch in der KI</titlebar>
 			<mybody>
@@ -377,13 +474,16 @@
 							</li>
 							<br />
 							<li style="margin-bottom: 10px; font-size: 0.6em;">
-								• CO2-Emissionen von fünf Autos über ihren gesamten Lebenszyklus.
+								• CO2-Emissionen von fünf Autos über ihren gesamten
+								Lebenszyklus.
 							</li>
 							<li style="margin-bottom: 10px; font-size: 0.6em;">
-								• KI benötigt im Vergleich zum menschlichen Gehirn deutlich mehr Energie.
+								• KI benötigt im Vergleich zum menschlichen Gehirn deutlich mehr
+								Energie.
 							</li>
 							<li style="margin-bottom: 10px; font-size: 0.6em;">
-								• BERT kann CO2-Fußabdruck eines transamerikanischen Fluges erreichen.
+								• BERT kann CO2-Fußabdruck eines transamerikanischen Fluges
+								erreichen.
 							</li>
 						</ul>
 					</div>
@@ -401,7 +501,6 @@
 		<Notes></Notes></Slide
 	>
 
-
 	<script>
 		newChapter('Referenzen')
 	</script>
@@ -410,7 +509,6 @@
 			<!-- <titlebar > Poster-Related References (TODO) </titlebar> -->
 			<mybody>
 				<ul class="a">
-					<li>Ahmadi, (2020)</li>
 					<li>Yu, et al., (2022)</li>
 					<li>
 						wsj.com <a
@@ -421,6 +519,30 @@
 					<li>
 						Ingenieur.de<a
 							href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/"
+							>, (2023)</a
+						>
+					</li>
+
+					<li>
+						bigml.com<a
+							href="https://blog.bigml.com/2021/11/22/introduction-to-image-processing/"
+							>, (2023)</a
+						>
+					</li>
+					<li>
+						researchgate.net<a
+							href="https://www.researchgate.net/figure/Image-pixel-generation-In-Digital-Image-Processing-the-digital-image-feature-extraction_fig1_283800375"
+							>, (2023)</a
+						>
+					</li>
+					<li>
+						pylessons.com<a href="https://pylessons.com/speech-recognition"
+							>, (2023)</a
+						>
+					</li>
+					<li>
+						kardome.com<a
+							href="https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition"
 							>, (2023)</a
 						>
 					</li>
@@ -487,6 +609,26 @@
 		<Notes></Notes></Slide
 	>
 
+	<Slide>
+		<Layout>
+			<titlebar>Frage | Gedankenexperiment</titlebar>
+			<mybody>
+				<ul>
+					<li>
+						Wenn ihr euch aus Protest für den Umweltschutz irgendwo festkleben
+						könntet, wo würde das sein?
+					</li>
+					<br />
+					<li style="margin-bottom: 10px;">1. Auf der Autobahn</li>
+					<li style="margin-bottom: 10px;">2. Am Flughafen</li>
+					<li style="margin-bottom: 10px;">3. Vor einem KI-Unternehmen</li>
+					<li style="margin-bottom: 10px;">4. Auf Zuggleise</li>
+				</ul>
+			</mybody>
+		</Layout>
+	</Slide>
+
+	<!-- to mimic the latex template  -->
 	<!-- to mimic the latex template  -->
 	<!-- to mimic the latex template  -->
 	<!-- to mimic the latex template  -->
