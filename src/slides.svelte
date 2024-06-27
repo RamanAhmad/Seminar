@@ -240,6 +240,17 @@
 		</Layout>
 		<Notes></Notes>
 	</Slide>
+	
+
+	<Slide><Layout>
+		<titlebar >ML</titlebar>
+			<figure>
+				<video controls class="w-[70%] mx-auto my-auto p-2">
+					<source src="Deep-Learning-Illustration.mp4" type="video/mp4" />
+				</video>
+				kaggle.com
+			</figure>
+		</Layout></Slide>
 
 	<Slide>
 		<Layout>
@@ -248,12 +259,14 @@
 				class="grid mt-[5%] mx-[10%]"
 				style="grid-template-columns: 1fr 1fr;"
 			>
+				<!-- svelte-ignore a11y-missing-attribute -->
 				<img src="Image-Processing-bigml.jpg" class="h-[45vh] object-cover" />
 				<div
 					class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
 				>
 					Bildverarbeitung
 				</div>
+				<!-- svelte-ignore a11y-missing-attribute -->
 				<img
 					src="Image-Processing-researchgate.jpg"
 					class="h-[45vh] object-cover"
@@ -266,6 +279,7 @@
 		<Layout>
 			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
 			<div class="grid mt-[7%] mx-[3%]" style="grid-template-columns: 1fr 1fr;">
+				<!-- svelte-ignore a11y-missing-attribute -->
 				<img
 					src="Speech-Recognition-pylessons.jpg"
 					class="h-[45vh] object-cover"
@@ -275,6 +289,7 @@
 				>
 					Sprachverarbeitung und -erkennung
 				</div>
+				<!-- svelte-ignore a11y-missing-attribute -->
 				<img
 					src="Speech-Recognition-Kardome.jpg"
 					class="h-[45vh] object-cover"
@@ -502,11 +517,65 @@
 	>
 
 	<script>
+		newChapter('SE & DI')
+	</script>
+	<Slide
+	><Layout>
+		<titlebar>Studienergebnisse und deren Interpretation</titlebar>
+		<mybody>
+			<div class="flex items-center justify-center flex-col">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<img
+					class="h-[70vh] align-middle mb-2"
+					src="Deep-Learning.jpg"
+				/>
+				<div class="text-xs mt-auto">Quelle: arxiv.org</div>
+			</div>
+		</mybody>
+	</Layout>
+	<Notes>
+		These are some presenter notes that can help during the actual
+		presentation.<br />
+		They are displayed on the presenter's screen if "presenter mode" has been entered.
+	</Notes></Slide
+>
+
+<script>
+	newChapter('Leitfrage')
+</script>
+<Slide
+		><Layout>
+			<titlebar>Energieverbrauch in der KI</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center">
+					<div class="flex-1">
+						<ul>
+							<li style="margin-bottom: 3px; font-size: 0.6em;">
+								Wie können wir den Energieverbrauch von maschinellem Lernen nachhaltig reduzieren, ohne die Leistungsfähigkeit zu beeinträchtigen?
+							</li>
+						</ul>
+					</div>
+					<div class="flex-1 flex items-center justify-center flex-col">
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							class="h-[50vh] align-middle mb-2"
+							src="KI-Engergieverbrauch.jpg"
+						/>
+						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
+					</div>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+>
+
+
+	<script>
 		newChapter('Referenzen')
 	</script>
 	<Slide
 		><Layout>
-			<!-- <titlebar > Poster-Related References (TODO) </titlebar> -->
 			<mybody>
 				<ul class="a">
 					<li>Yu, et al., (2022)</li>
@@ -544,6 +613,20 @@
 						kardome.com<a
 							href="https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition"
 							>, (2023)</a
+						>
+					</li>
+					<li>
+						arxiv.org<a
+							href="https://arxiv.org/pdf/1906.02243"
+							>, Energy and Policy Considerations for Deep Learning in NLP</a
+						>
+					</li>
+
+					<li>
+						arxiv.org<a
+							href="https://arxiv.org/pdf/2303.01980"
+							>, Towards energy-efficient Deep Learning: An overview of energy-
+							efficient approaches along the Deep Learning Lifecycle</a
 						>
 					</li>
 				</ul>
