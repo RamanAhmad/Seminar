@@ -256,7 +256,7 @@
 		<Layout>
 			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
 			<div
-				class="grid mt-[5%] mx-[10%]"
+				class="grid mt-[5%] mx-[5%]"
 				style="grid-template-columns: 1fr 1fr;"
 			>
 				<!-- svelte-ignore a11y-missing-attribute -->
@@ -269,7 +269,7 @@
 				<!-- svelte-ignore a11y-missing-attribute -->
 				<img
 					src="Image-Processing-researchgate.jpg"
-					class="h-[45vh] object-cover"
+					class="h-[40vh] object-cover"
 				/>
 			</div>
 		</Layout>
