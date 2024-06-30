@@ -139,10 +139,9 @@
 					<li>1. Maschinelles Lernen</li>
 					<li>2. Rechenzentren und Energieverbrauch</li>
 					<li>3. Energieverbrauch in der KI</li>
-					<li>4. Studienergebnisse und deren Interpretation</li>
-					<li>5. Leitfrage</li>
-					<li>6. Sclussfolgerung</li>
-					<li>7. Referenzen</li>
+					<li>4. Stromverbrauch von GPT-Modellen</li>
+					<li>5. Schlussfolgerung</li>
+					<li>6. Referenzen</li>
 				</ul>
 			</mybody>
 		</Layout>
@@ -241,6 +240,20 @@
 		<Notes></Notes>
 	</Slide>
 	
+	<Slide><Layout>
+		<titlebar>ML - overview</titlebar>
+		<mybody>
+			<div class="flex items-center justify-center flex-col">
+				<!-- svelte-ignore a11y-missing-attribute -->
+				<img
+					class="h-[70vh] align-middle mb-2"
+					src="Machine_Learning-Overview.jpg"
+				/>
+				<div class="text-xs mt-auto">Quelle: github:christophm</div>
+			</div>
+		</mybody>
+	</Layout></Slide
+>
 
 	<Slide><Layout>
 		<titlebar >ML</titlebar>
@@ -248,7 +261,7 @@
 				<video controls class="w-[70%] mx-auto my-auto p-2">
 					<source src="Deep-Learning-Illustration.mp4" type="video/mp4" />
 				</video>
-				kaggle.com
+				<div class="text-xs mt-auto">Quelle: kaggle.com</div>
 			</figure>
 		</Layout></Slide>
 
@@ -256,7 +269,7 @@
 		<Layout>
 			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
 			<div
-				class="grid mt-[5%] mx-[5%]"
+				class="grid mt-[5%] mx-[5f%]"
 				style="grid-template-columns: 1fr 1fr;"
 			>
 				<!-- svelte-ignore a11y-missing-attribute -->
@@ -516,12 +529,9 @@
 		<Notes></Notes></Slide
 	>
 
-	<script>
-		newChapter('SE & DI')
-	</script>
-	<Slide
-	><Layout>
-		<titlebar>Studienergebnisse und deren Interpretation</titlebar>
+
+	<Slide><Layout>
+		<titlebar></titlebar>
 		<mybody>
 			<div class="flex items-center justify-center flex-col">
 				<!-- svelte-ignore a11y-missing-attribute -->
@@ -541,106 +551,151 @@
 >
 
 <script>
-	newChapter('Leitfrage')
+	newChapter('SV GPT')
+</script>
+<Slide><Layout>
+	<titlebar>Stromverbrauch von GPT-Modellen</titlebar>
+	<mybody>
+		<div class="flex items-center justify-center flex-col">
+			<!-- svelte-ignore a11y-missing-attribute -->
+			<img
+				class="h-[50vh] align-middle mb-2"
+				src="GPT_Electricity_Consumption.jpg"
+			/>
+		</div>
+	</mybody>
+</Layout>
+<Notes>
+	These are some presenter notes that can help during the actual
+	presentation.<br />
+	They are displayed on the presenter's screen if "presenter mode" has been entered.
+</Notes></Slide
+>
+<Slide><Layout>
+	<titlebar>Stromverbrauch von GPT-Modellen</titlebar>
+	<mybody>
+		<div class="flex items-center justify-center flex-col">
+			<!-- svelte-ignore a11y-missing-attribute -->
+			<img
+				class="h-[50vh] align-middle mb-2"
+				src="GPT_Electricity_Consumption_American-House.jpg"
+			/>
+		</div>
+	</mybody>
+</Layout>
+<Notes>
+	These are some presenter notes that can help during the actual
+	presentation.<br />
+	They are displayed on the presenter's screen if "presenter mode" has been entered.
+</Notes></Slide
+>
+
+<script>
+	newChapter('Schlussfolgerung')
 </script>
 <Slide
 		><Layout>
-			<titlebar>Energieverbrauch in der KI</titlebar>
+			<titlebar>Schlussfolgerung</titlebar>
 			<mybody>
-				<div class="flex items-center justify-center">
-					<div class="flex-1">
-						<ul>
-							<li style="margin-bottom: 3px; font-size: 0.6em;">
-								Wie können wir den Energieverbrauch von maschinellem Lernen nachhaltig reduzieren, ohne die Leistungsfähigkeit zu beeinträchtigen?
-							</li>
-						</ul>
-					</div>
-					<div class="flex-1 flex items-center justify-center flex-col">
-						<!-- svelte-ignore a11y-missing-attribute -->
-						<img
-							class="h-[50vh] align-middle mb-2"
-							src="KI-Engergieverbrauch.jpg"
-						/>
-						<div class="text-xs mt-auto">Quelle: ingenieur.de</div>
-					</div>
+				<ul>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Die Entwicklung der GPT-Modelle zeigt eine signifikante <br/> Zunahme im Stromverbrauch mit jeder Generation
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Hoher Energiebedarf pro Modell
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Notwendigkeit für Effizienzsteigerung und Forschung
+					</li>
+					<li style="margin-bottom: 10px; font-size: 0.6em;">
+						• Herausforderungen für Skalierung und Nachhaltigkeit
+					</li>
+				</ul>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+
+
+	<Slide
+		><Layout>
+			<titlebar>Durchschnittlicher Wachstumsrate GPT-3 - GPT-3.5</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center flex-col">
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<img
+						class="h-[50vh] align-middle mb-2"
+						src="GPT_Electricity_Consumption_GPT3_And_GPT3.5.jpg"
+					/>
 				</div>
 			</mybody>
 		</Layout>
 		<Notes></Notes></Slide
 	>
->
 
+	<Slide
+		><Layout>
+			<titlebar>Durchschnittlicher Wachstumsrate GPT-4 - GPT-5</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center flex-col">
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<img
+						class="h-[50vh] align-middle mb-2"
+						src="GPT_Electricity_Consumption_GPT4_And_GPT5.jpg"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
+
+	<Slide
+		><Layout>
+			<titlebar>Durchschnittlicher Wachstumsrate GPT-3 - GPT-5</titlebar>
+			<mybody>
+				<div class="flex items-center justify-center flex-col">
+					<!-- svelte-ignore a11y-missing-attribute -->
+					<img
+						class="h-[50vh] align-middle mb-2"
+						src="GPT_Electricity_Consumption_All_Modules.jpg"
+					/>
+				</div>
+			</mybody>
+		</Layout>
+		<Notes></Notes></Slide
+	>
 
 	<script>
 		newChapter('Referenzen')
 	</script>
-	<Slide
-		><Layout>
+	<Slide>
+		<Layout>
 			<mybody>
-				<ul class="a">
+				<ul class="a" style="font-size: 25px;">
 					<li>Yu, et al., (2022)</li>
-					<li>
-						wsj.com <a
-							href="https://www.wsj.com/tech/ai/ai-energy-consumption-fc79d94f"
-							>, (2024)</a
-						>
-					</li>
-					<li>
-						Ingenieur.de<a
-							href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/"
-							>, (2023)</a
-						>
-					</li>
-
-					<li>
-						bigml.com<a
-							href="https://blog.bigml.com/2021/11/22/introduction-to-image-processing/"
-							>, (2023)</a
-						>
-					</li>
-					<li>
-						researchgate.net<a
-							href="https://www.researchgate.net/figure/Image-pixel-generation-In-Digital-Image-Processing-the-digital-image-feature-extraction_fig1_283800375"
-							>, (2023)</a
-						>
-					</li>
-					<li>
-						pylessons.com<a href="https://pylessons.com/speech-recognition"
-							>, (2023)</a
-						>
-					</li>
-					<li>
-						kardome.com<a
-							href="https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition"
-							>, (2023)</a
-						>
-					</li>
-					<li>
-						arxiv.org<a
-							href="https://arxiv.org/pdf/1906.02243"
-							>, Energy and Policy Considerations for Deep Learning in NLP</a
-						>
-					</li>
-
-					<li>
-						arxiv.org<a
-							href="https://arxiv.org/pdf/2303.01980"
-							>, Towards energy-efficient Deep Learning: An overview of energy-
-							efficient approaches along the Deep Learning Lifecycle</a
-						>
-					</li>
+					<li>wsj.com <a href="https://www.wsj.com/tech/ai/ai-energy-consumption-fc79d94f">, (2024)</a></li>
+					<li>Ingenieur.de <a href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/">, (2023)</a></li>
+					<li>bigml.com <a href="https://blog.bigml.com/2021/11/22/introduction-to-image-processing/">, (2023)</a></li>
+					<li>researchgate.net <a href="https://www.researchgate.net/figure/Image-pixel-generation-In-Digital-Image-Processing-the-digital-image-feature-extraction_fig1_283800375">, (2023)</a></li>
+					<li>pylessons.com <a href="https://pylessons.com/speech-recognition">, (2023)</a></li>
+					<li>kardome.com <a href="https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition">, (2023)</a></li>
+					<li>arxiv.org <a href="https://arxiv.org/pdf/1906.02243">, Energy and Policy Considerations for Deep Learning in NLP</a></li>
+					<li>arxiv.org <a href="https://arxiv.org/pdf/2303.01980">, Towards energy-efficient Deep Learning</a></li>
+					<li>medium.com <a href="https://www.springboard.com/blog/data-science/machine-learning-gpt-3-open-ai/">, Is the energy consumption of large language model is over-hyped</a></li>
+					<li>forbes.com <a href="https://www.forbes.com/sites/arielcohen/2024/05/23/ai-is-pushing-the-world-towards-an-energy-crisis/">, Is the energy consumption of large language model is over-hyped</a></li>
+					<li>theverge.com <a href="https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption">, Is the energy consumption of large language model is over-hyped</a></li>
 				</ul>
 			</mybody>
 		</Layout>
 		<Notes>
-			These are some presenter notes that can help during the actual
-			presentation.<br />
+			These are some presenter notes that can help during the actual presentation.<br />
 			They are displayed on the presenter's screen if "presenter mode" has been entered.
-		</Notes></Slide
-	>
+		</Notes>
+	</Slide>
+	
 
 	<script>
-		newChapter('Sonstiges')
+		newChapter('Anhang')
 	</script>
 	<Slide
 		><Layout>
