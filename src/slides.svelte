@@ -153,7 +153,7 @@
 	</Slide>
 
 	<script>
-		newChapter('Frage')
+		newChapter('Motivation')
 	</script>
 	<Slide>
 		<Layout>
