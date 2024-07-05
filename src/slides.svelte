@@ -137,7 +137,7 @@
 			<mybody class="textStyle">
 				<ul>
 					<li>1. Maschinelles Lernen</li>
-					<li>2. Rechenzentren und Energieverbrauch</li>
+					<li>2. Energieverbrauch in Rechenzentren</li>
 					<li>3. Energieverbrauch in der KI</li>
 					<li>4. Stromverbrauch von GPT-Modellen</li>
 					<li>5. Schlussfolgerung</li>
@@ -161,18 +161,20 @@
 			<mybody>
 				<ul>
 					<li>
-						Wie viel CO₂-Emissionen werden geschätzt, dass das Training eines
-						großen maschinellen Lernmodells wie GPT-3 verursacht?
+						Wie hoch ist der Energieverbrauch von GPT-3.5 im Vergleich zu anderen Energieverbrauchern?
 					</li>
 					<br />
 					<li style="margin-bottom: 10px;">
-						A) So viel wie ein Kühlschrank in einem Jahr
+						A) etwa 2 Personen im Jahr
 					</li>
 					<li style="margin-bottom: 10px;">
-						B) So viel wie ein Auto in einem Jahr
+						B) etwa 4.125 Haushalte im Jahr
 					</li>
 					<li style="margin-bottom: 10px;">
-						C) So viel wie fünf Autos in ihrem gesamten Lebenszyklus
+						C) etwa 2 Kühlschränke im Jahr
+					</li>
+					<li style="margin-bottom: 10px;">
+						D) etwa 3 Elektroautos im Jahr
 					</li>
 				</ul>
 			</mybody>
@@ -184,11 +186,7 @@
 			<titlebar>ChatGPT Frage-Antwort</titlebar>
 			<mybody>
 				<ul>
-					<li style="font-size: 0.6em;">
-						Ich möchte mein Seminar mit einer Frage anfangen, kannst du mir
-						bitte eine Frage bezüglich meiner Präsentation formulieren?
-					</li>
-					<br />
+	
 					<div class="flex-1 flex items-center justify-center flex-col">
 						<!-- svelte-ignore a11y-missing-attribute -->
 						<img class="h-[50vh] align-middle mb-2" src="ChatGPT-Frage.jpg" />
@@ -265,51 +263,69 @@
 			</figure>
 		</Layout></Slide>
 
-	<Slide>
-		<Layout>
-			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
-			<div
-				class="grid mt-[5%] mx-[5f%]"
-				style="grid-template-columns: 1fr 1fr;"
-			>
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<img src="Image-Processing-bigml.jpg" class="h-[45vh] object-cover" />
+		<Slide>
+			<Layout>
+				<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
 				<div
-					class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
+					class="grid mt-[5%] mx-[5%]"
+					style="grid-template-columns: 1fr 1fr; gap"
 				>
-					Bildverarbeitung
+					<div>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							src="Image-Processing-researchgate.jpg"
+							class="h-[45vh] object-cover ml-[50px]"
+						/>
+						<div
+							class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
+						>
+							Bildverarbeitung
+						</div>
+						<div class="text-xs mt-auto ml-[50px]">Quelle: researchgate.net</div>
+					</div>
+					<div>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							src="Image-Processing-bigml.jpg"
+							class="h-[45vh] object-cover"
+						/>
+						<div class="text-xs mt-auto">Quelle: bigml.com</div>
+					</div>
 				</div>
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<img
-					src="Image-Processing-researchgate.jpg"
-					class="h-[40vh] object-cover"
-				/>
-			</div>
-		</Layout>
-	</Slide>
+			</Layout>
+		</Slide>
+		
+		
 
-	<Slide>
-		<Layout>
-			<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
-			<div class="grid mt-[7%] mx-[3%]" style="grid-template-columns: 1fr 1fr;">
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<img
-					src="Speech-Recognition-pylessons.jpg"
-					class="h-[45vh] object-cover"
-				/>
-				<div
-					class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
-				>
-					Sprachverarbeitung und -erkennung
+		<Slide>
+			<Layout>
+				<titlebar> Anwendungen im Maschinellen Lernen </titlebar>
+				<div class="grid mt-[7%] mx-[3%]" style="grid-template-columns: 1fr 1fr; gap: 20px;">
+					<div>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							src="Speech-Recognition-pylessons.jpg"
+							class="h-[45vh] object-cover"
+						/>
+						<div
+							class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white text-center py-2"
+						>
+							Sprachverarbeitung und -erkennung
+						</div>
+						<div class="text-xs mt-auto">Quelle: pylessons.com</div>
+					</div>
+					<div>
+						<!-- svelte-ignore a11y-missing-attribute -->
+						<img
+							src="Speech-Recognition-Kardome.jpg"
+							class="h-[45vh] object-cover"
+						/>
+						<div class="text-xs mt-auto">Quelle: Kardome.com</div>
+					</div>
 				</div>
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<img
-					src="Speech-Recognition-Kardome.jpg"
-					class="h-[45vh] object-cover"
-				/>
-			</div>
-		</Layout>
-	</Slide>
+			</Layout>
+		</Slide>
+		
 
 	<script>
 		newChapter('RZ & EV')
@@ -591,30 +607,25 @@
 >
 
 <script>
-	newChapter('Schlussfolgerung')
+    newChapter('Schlussfolgerung')
 </script>
-<Slide
-		><Layout>
-			<titlebar>Schlussfolgerung</titlebar>
-			<mybody>
-				<ul>
-					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Die Entwicklung der GPT-Modelle zeigt eine signifikante <br/> Zunahme im Stromverbrauch mit jeder Generation
-					</li>
-					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Hoher Energiebedarf pro Modell
-					</li>
-					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Notwendigkeit für Effizienzsteigerung und Forschung
-					</li>
-					<li style="margin-bottom: 10px; font-size: 0.6em;">
-						• Herausforderungen für Skalierung und Nachhaltigkeit
-					</li>
-				</ul>
-			</mybody>
-		</Layout>
-		<Notes></Notes></Slide
-	>
+<Slide><Layout>
+    <titlebar>Schlussfolgerung</titlebar>
+    <mybody style="padding-left: 0;">
+        <ul style="padding-left: 0; margin-left: 0;">
+            <li style="margin-bottom: 25px; font-size: 0.8em;">
+            Die Entwicklung der GPT-Modelle zeigt eine signifikante <br/> Zunahme im Stromverbrauch mit jeder Generation
+            </li>
+            <li style="margin-bottom: 10px; font-size: 0.6em;">
+                • Hoher Energiebedarf pro Modell
+            </li>
+            <li style="margin-bottom: 10px; font-size: 0.6em;">
+                • Notwendigkeit für Effizienzsteigerung und Forschung
+            </li>
+        </ul>
+    </mybody>
+</Layout><Notes></Notes></Slide>
+
 
 
 	<Slide
@@ -664,7 +675,24 @@
 		</Layout>
 		<Notes></Notes></Slide
 	>
-
+	<Slide>
+		<Layout>
+			<titlebar>Frage | Gedankenexperiment</titlebar>
+			<mybody>
+				<ul>
+					<li>
+						Wenn ihr euch aus Protest für den Umweltschutz irgendwo festkleben
+						könntet, wo würde das sein?
+					</li>
+					<br />
+					<li style="margin-bottom: 10px;">1. Auf der Autobahn</li>
+					<li style="margin-bottom: 10px;">2. Am Flughafen</li>
+					<li style="margin-bottom: 10px;">3. Vor einem KI-Unternehmen</li>
+					<li style="margin-bottom: 10px;">4. Auf Zuggleise</li>
+				</ul>
+			</mybody>
+		</Layout>
+	</Slide>
 	<script>
 		newChapter('Referenzen')
 	</script>
@@ -672,18 +700,20 @@
 		<Layout>
 			<mybody>
 				<ul class="a" style="font-size: 25px;">
-					<li>Yu, et al., (2022)</li>
-					<li>wsj.com <a href="https://www.wsj.com/tech/ai/ai-energy-consumption-fc79d94f">, (2024)</a></li>
-					<li>Ingenieur.de <a href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/">, (2023)</a></li>
-					<li>bigml.com <a href="https://blog.bigml.com/2021/11/22/introduction-to-image-processing/">, (2023)</a></li>
+					<li>ekamperi.github.io <a href="https://ekamperi.github.io/machine%20learning/2019/08/14/energy-considerations-dnn.html">, Energy considerations for training deep neural networks</a></li>
+					<li>spektrum.de <a href="https://www.spektrum.de/news/kuenstliche-intelligenz-verbraucht-fuer-den-lernprozess-unvorstellbar-viel-energie/1660246">, KI ist alles andere als grün</a></li>
+					<li>datacenters.lbl.gov <a href="https://datacenters.lbl.gov/resources/information-factories">, The Information Factories</a></li>
+					<li>wsj.com <a href="https://www.wsj.com/tech/ai/ai-energy-consumption-fc79d94f">, AI Is Ravenous for Energy. Can It Be Satisfied?</a></li>
+					<li>Ingenieur.de <a href="https://www.ingenieur.de/technik/fachbereiche/ittk/warum-rechenzentren-als-systemrelevant-eingestuft-werden-muessen/">, Warum Rechenzentren als systemrelevant eingestuft werden müssen</a></li>
+					<li>bigml.com <a href="https://blog.bigml.com/2021/11/22/introduction-to-image-processing/">, Introduction to Image Processing</a></li>
 					<li>researchgate.net <a href="https://www.researchgate.net/figure/Image-pixel-generation-In-Digital-Image-Processing-the-digital-image-feature-extraction_fig1_283800375">, (2023)</a></li>
 					<li>pylessons.com <a href="https://pylessons.com/speech-recognition">, (2023)</a></li>
 					<li>kardome.com <a href="https://www.kardome.com/blog-posts/difference-speech-and-voice-recognition">, (2023)</a></li>
 					<li>arxiv.org <a href="https://arxiv.org/pdf/1906.02243">, Energy and Policy Considerations for Deep Learning in NLP</a></li>
 					<li>arxiv.org <a href="https://arxiv.org/pdf/2303.01980">, Towards energy-efficient Deep Learning</a></li>
-					<li>medium.com <a href="https://www.springboard.com/blog/data-science/machine-learning-gpt-3-open-ai/">, Is the energy consumption of large language model is over-hyped</a></li>
-					<li>forbes.com <a href="https://www.forbes.com/sites/arielcohen/2024/05/23/ai-is-pushing-the-world-towards-an-energy-crisis/">, Is the energy consumption of large language model is over-hyped</a></li>
-					<li>theverge.com <a href="https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption">, Is the energy consumption of large language model is over-hyped</a></li>
+					<li>medium.com <a href="https://www.springboard.com/blog/data-science/machine-learning-gpt-3-open-ai/">, OpenAI GPT-3: Everything You Need to Know</a></li>
+					<li>forbes.com <a href="https://www.forbes.com/sites/arielcohen/2024/05/23/ai-is-pushing-the-world-towards-an-energy-crisis/">, AI Is Pushing The World Toward An Energy Crisis</a></li>
+					<li>theverge.com <a href="https://www.theverge.com/24066646/ai-electricity-energy-watts-generative-consumption">, How much electricity does AI consume</a></li>
 				</ul>
 			</mybody>
 		</Layout>
@@ -747,24 +777,6 @@
 		<Notes></Notes></Slide
 	>
 
-	<Slide>
-		<Layout>
-			<titlebar>Frage | Gedankenexperiment</titlebar>
-			<mybody>
-				<ul>
-					<li>
-						Wenn ihr euch aus Protest für den Umweltschutz irgendwo festkleben
-						könntet, wo würde das sein?
-					</li>
-					<br />
-					<li style="margin-bottom: 10px;">1. Auf der Autobahn</li>
-					<li style="margin-bottom: 10px;">2. Am Flughafen</li>
-					<li style="margin-bottom: 10px;">3. Vor einem KI-Unternehmen</li>
-					<li style="margin-bottom: 10px;">4. Auf Zuggleise</li>
-				</ul>
-			</mybody>
-		</Layout>
-	</Slide>
 
 	<!-- to mimic the latex template  -->
 	<!-- to mimic the latex template  -->
